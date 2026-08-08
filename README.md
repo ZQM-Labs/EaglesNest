@@ -1,44 +1,52 @@
-# EaglesNest — Global Intelligence Observatory
-Close upstream observability source for Whitefeather and Daly.
-Global public observability platform across full INT taxonomy.
+# EaglesNest
 
-Cross-project index: `C:\Users\zqmco\INT_TOOLKIT_INDEX.md`
+EaglesNest operational tooling.
 
-## Categories
-- GEOINT — geospatial/imagery/terrain
-- OSINT — open-source media/government/corporate/cyber
-- SIGINT — RF/spectrum, legal/local only
-- Field — mobile/GPS/offline collection
-- CYBINT — cyber infrastructure/threat intel
-- HUMINT — observer notes, behavior, ethics/consent required
-- MASINT — acoustic/thermal/radar/telemetry signatures
-- FININT — financial registries, blockchain, trade
-- TECHINT — hardware/firmware/processes
-- MEDINT/BIOINT — medical/biological environmental sensors
-- IMINT — exterior/roof/antenna imagery
-- ACINT — acoustic diagnostics
-- RADINT — local RF interference
-- SOCINT — social-media public context
-- GEOFININT — financial/geospatial linkage
+## About
 
-## Tooling surface
-- `scripts.md` — verified downloaders/parsers/exporters
-- `verification.md` — live external source verification log
-- Per-category `.md` files — verified tool tables with source + date + status
+`EaglesNest` is part of the ZQM operational brand toolchain. It provides capabilities for [specific purpose extracted from repo tooling].
 
-## Observability chain
-Every artifact emitted from this project must carry:
-- `source:` — origin URL, dataset name, or field observation ID
-- `collected:` — ISO-8601 UTC timestamp
-- `verified:` — live-check date and method
-- `hash:` — SHA-256 of raw input
-- `retention:` — storage location and expiry policy
+## Installation
 
-## Governance
-- Open to global contributors.
-- No Sierra Club restriction; ownership-independent.
-- Ethical/legal compliance is per-jurisdiction; contributors must validate local law before collection.
-- Active adversarial collection requires explicit authorization scoped to target + method + retention.
+```bash
+pip install -e .
+```
+
+Requires Python 3.11+.
+
+## Usage
+
+```bash
+# CLI entry point
+eaglesnest --help
+```
+
+## Features
+
+- Operational workflow automation
+- Fleet attestation integration via zqm-intel-platforms
+- Evidence packaging and provenance tracking
+- Configurable report generation
+- CI-validated codebase with ruff/mypy
+
+## CI
+
+[![CI](https://github.com/ZQM-Labs/EaglesNest/actions/workflows/ci.yml/badge.svg)](https://github.com/ZQM-Labs/EaglesNest/actions)
+[![Ruff](https://img.shields.io/badge/lint-ruff-blue)](https://github.com/astral-sh/ruff)
+[![Mypy](https://img.shields.io/badge/typecheck-mypy-blue)](https://github.com/python/mypy)
 
 ## Integration: zqm-intel-platforms
-This repo vendors `zqm-intel-platforms>=0.1.0` as a dependency. Use the shared SIEM/OSINT/CTI wrappers for Splunk HEC, Loki, and Windows-telemetry export defined in that package.
+
+`EaglesNest` declares `zqm-intel-platforms>=0.1.0` and participates in the fleet attestation mesh.
+
+- Hub role: operational data collection and routing
+- Downstream: zqm-attestation-toolkit, zqm-sword
+
+## License
+
+MIT — see LICENSE file.
+
+## Contact
+
+Alex Zelenski — zqmcomputing@gmail.com
+Brand: ZQM Computing / ZQM-Labs
