@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "eaglesnest-tools"
+version = "0.1.0"
+description = "EaglesNest observability chain and verification tools"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "zqm-intel-platforms>=0.1.0",
+]
+
+[project.scripts]
+en-chain-builder = "en_chain_builder:main"
+en-verification-logger = "en_verification_logger:main"
+en-packager = "en_packager:main"
+en-table-gen = "en_table_gen:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py311"
+src = ["tools", "tests"]
+
+[tool.mypy]
+strict = true
+disable_error_code = ["type-arg", "no-any-return"]
+files = ["tools", "tests"]
