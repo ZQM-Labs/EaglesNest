@@ -19,6 +19,16 @@ en-verification-logger = "en_verification_logger:main"
 en-packager = "en_packager:main"
 en-table-gen = "en_table_gen:main"
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "mypy>=1.0",
+    "bandit>=1.7",
+    "codespell>=2.0",
+    "pre-commit>=3.0",
+    "ruff>=0.5",
+]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
